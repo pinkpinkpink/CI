@@ -1,0 +1,13 @@
+###yum安装
+
+yum install docker-io </br>
+启动
+
+sudo systemctl enable docker </br>
+
+sudo systemctl start docker </br>
+
+systemctl status docker.service</br>
+
+
+###ruby脚本安装 因网络原因失败</br>

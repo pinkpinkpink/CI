@@ -1,0 +1,31 @@
+###docker-compose.yml template
+
+version: "3"
+
+services:
+
+  webapp:
+
+  image:
+
+    example/web
+
+  ports:
+
+    -"80:80"
+
+  volumes:
+
+    -"data"
+
+
+
+###problem
+
+1.docker-compose.yml应该放在哪个路径下
+
+
+2.dcoker-compose.yml的作用是什么
+
+
+3.分别写出mysql、redis、postgresql、tomcat的compose.yml
