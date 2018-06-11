@@ -1,0 +1,19 @@
+###tomcat
+docker pull tomcat</br>
+
+docker run -i -t --name AuthDocker -p 8081:8080 tomcat /bin/bash</br>
+
+./catalina.sh run</br>
+
+####docker容器与本地文件的传输</br>
+
+docker ps -a </br>
+
+docker inspect -f '{{.Id}}' docker容器名称</br>
+
+docker cp 本地文件路径 dockerID全称：容器路径</br>
+
+docker start AuthDocker</br>
+
+docker attach AuthDocker</br>
+
