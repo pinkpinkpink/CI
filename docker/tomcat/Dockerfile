@@ -1,0 +1,10 @@
+FROM tomcat
+RUN 
+ADD 
+ENV 
+VOLUME /data
+EXPOSE 
+WORKDIR 
+USER
+
+CMD ["",""]

@@ -11,3 +11,53 @@ systemctl status docker.service</br>
 
 
 ###ruby脚本安装 因网络原因失败</br>
+
+
+###获取镜像
+docker pull</br>
+
+###运行
+docker run -it --rm container_name bash
+
+###列出镜像
+docker image ls</br>
+docker system df</br>
+
+###删除本地镜像
+docker image rm </br>
+
+###镜像是容器的基础
+docker commit
+docker run --name webserver -d -p 80:80 nginx</br>
+docker diff webserver</br>
+
+
+###使用Dockerfile定制镜像
+FROM 指定基础镜像</br>
+
+
+
+
+###操作docker容器
+docker run</br>
+docker container start</br>
+docker container ls</br>
+docker container stop</br>
+docker container restart</br>
+
+
+###进入容器
+docker attach </br>
+docker exec -it 
+
+###导出导入容器
+docker export</br>
+docker import</br>
+
+docker rm 
+
+
+
+##访问仓库
+docker search
+
