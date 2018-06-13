@@ -15,5 +15,13 @@ docker cp 本地文件路径 dockerID全称：容器路径</br>
 
 docker start AuthDocker</br>
 
-docker attach AuthDocker</br>
+docker attach AuthDocker</br> --已废弃
 
+
+###进入docker容器
+docker exec -it container_name sh
+
+
+###docker-compose.yml
+volumes:
+- 

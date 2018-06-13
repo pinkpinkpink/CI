@@ -67,8 +67,9 @@ docker container restart</br>
 
 
 ###进入容器
-docker attach </br>
-docker exec -it 
+docker exec -it container_name sh
+docker start tomcat
+docker exec -it tomcat sh
 
 ###导出导入容器
 docker export</br>
