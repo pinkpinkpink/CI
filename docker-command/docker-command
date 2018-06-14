@@ -60,10 +60,7 @@ FROM 指定基础镜像</br>
 
 ###操作docker容器
 docker run</br>
-docker container start</br>
-docker container ls</br>
-docker container stop</br>
-docker container restart</br>
+docker container start/stop/restart</br>
 
 
 ###进入容器
