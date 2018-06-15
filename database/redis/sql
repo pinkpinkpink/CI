@@ -1,0 +1,20 @@
+docker search redis 
+docker pull redis 
+###运行容器
+docker run -p 6379:6379 --name redis -v $PWD/data:/data -d redis redis-server --appendonly yes</br>
+
+-v $PWD/data:/data : 将主机中当前目录下的data挂载到容器的/data</br>
+
+redis-server --appendonly yes : 在容器执行redis-server启动命令，并打开redis持久化配置</br>
+
+docker ps
+
+###连接查看容器
+docker exec -it containerID redis-cli
+
+
+info
+
+###question 1
+docker如何实现redis集群部署
+

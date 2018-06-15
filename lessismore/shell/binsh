@@ -1,0 +1,28 @@
+#!/bin/sh #指定脚本解释器
+cd ~
+mkdir shell_tut
+cd shell_tut
+for((i=0；i<10;i++));do
+    touch test_$i.txt  #创建一个test_0...9.txt文件
+done 循环体结束
+
+
+hello.sh
+chmod +x hello.sh
+./hello.sh
+
+变量名和等号之间不能有空格
+
+使用变量才能加美元符
+
+if condition1
+then
+   command1
+   elfi condition2
+   command2
+   fi
+   
+   
+   source和.是等效的
+source ./function.sh
+. ./function.sh

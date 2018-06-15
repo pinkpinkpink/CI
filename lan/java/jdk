@@ -1,0 +1,5 @@
+vim /etc/profile
+###set java environment
+. /etc/profile
+
+

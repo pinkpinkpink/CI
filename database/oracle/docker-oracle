@@ -1,0 +1,5 @@
+docker search oraclelinux
+
+docker pull oraclelinux
+
+docker run -p 49160:22 -p 49161:1521 --name oracle oraclelinux<br>

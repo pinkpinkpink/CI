@@ -1,0 +1,21 @@
+###连接数据库
+mysql -h host -u root -p
+###断开连接
+>mysql quit&&\q 
+
+
+###查询
+SELECT VERSION(),CURRENT_DATE;
+关键词不区分大小写
+
+select now();
+
+show databases;
+
+use
+###创建选择数据库
+create database dbname;
+
+###修改密码
+su
+ALTER USER root WITH PASSWORD 
