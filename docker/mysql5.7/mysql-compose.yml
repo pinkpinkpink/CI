@@ -8,13 +8,13 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=password
     volumes:
-      - mysql-data:/var/lib/mysql
+      - data:/var/lib/mysql
     command: [
       "--log-bin=mysql-bin",
       "--server-id=1"
     ]
 volumes:
-  mysql-data:
+  data:
 networks:
   default:
     external:
