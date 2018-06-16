@@ -1,4 +1,16 @@
 ###brew
+###浏览器
+brew home 
+
+ruby -version
+
+which brew
+
+ 
+brew
+
+###查看软件
+brew upgrade []
 
 brew cask list
 brew cask info
