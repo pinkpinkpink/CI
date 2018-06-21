@@ -34,3 +34,9 @@ jar xvf fn.jar
 8080
 8009
 为其他端口
+
+
+
+###查看端口
+netstat -alnp | grep 8080
+kill -9 xxxx
