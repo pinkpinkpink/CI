@@ -19,8 +19,10 @@ man docker</br>
 dokcer help</br>
 
 
-###获取镜像
-docker pull</br>
+###拉取镜像
+docker search centos
+docker pull centos</br>
+docker pull
 
 ###运行
 docker run -it --rm container_name bash
@@ -52,16 +54,17 @@ docker restart </br>
 docker run </br>
 docker service </br>
 
-###使用Dockerfile定制镜像
-FROM 指定基础镜像</br>
-
 
 
 
 ###操作docker容器
-docker run</br>
-docker container start/stop/restart</br>
 
+启动容器<br>
+docker run</br>
+启动已终止的容器
+docker container start/stop/restart</br>
+后台运行<br>
+-d 
 
 ###进入容器
 docker exec -it container_name sh
@@ -72,10 +75,53 @@ docker exec -it tomcat sh
 docker export</br>
 docker import</br>
 
-docker rm 
+docker container rm 
 
+docker container ls -a
 
+###清除所有处于终止状态的的容器
+docker container prune
 
 ##访问仓库
 docker search
 
+docker system df
+docker image ls<br>
+
+docker image rm 
+
+
+docker pull nginx
+docker run --name webserver -d -p 8098:80 nginx
+docker exec -it webserver bash 
+交互式终端进入webserver容器执行bash命令获得可操作shell 
+docker commit --author --message webserver nginx:v2
+docker history nginx:v2
+dcoker run --name web2 -d -p 8099:80 nginx:v2
+
+
+###使用Dockerfile定制镜像
+FROM 指定基础镜像</br>
+docker build -t nginx:v3 .
+.表示当前目录，⚠️不能将Dockerfile放在硬盘的根目录执行
+
+
+###应用前的准备工作：
+启动容器就是启动主进程<br>
+mysql服务器运行前需要数据库配置和初始化：ENTRYPOINT
+
+ENV设置环境变量
+
+⚠️VOLUME
+数据库文件应该保存卷(volume)中
+VOLUME /data
+docker run -d -v mydata:/data xxx
+使用mydata命名卷挂载到/data位置
+
+
+EXPOSE声明端口
+WORKDIR指定工作目录
+
+
+⚠️多阶段构建
+全部放入一个Dockerfile<br>
