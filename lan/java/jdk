@@ -1,5 +1,21 @@
+###环境变量
 vim /etc/profile
 ###set java environment
 . /etc/profile
 
 
+###tomcat
+
+####设置tomcat后台启动
+./startup.sh &
+
+####查看启动日志
+./catalina.sh run
+
+
+####同一台服务器运行多个tomcat
+修改三个端口
+8005
+8080
+8009
+为其他端口
