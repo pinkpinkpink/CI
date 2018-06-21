@@ -12,6 +12,21 @@ vim /etc/profile
 ####查看启动日志
 ./catalina.sh run
 
+####运行jar
+nohup java -jar fn.java &
+nohup不挂断运行命令，当账户退出或终端关闭时，程序仍然运行
+&表示后台运行
+
+
+###解压打包
+
+7z e filename.7z
+
+
+压缩包
+jar cvf fn.jar
+打包
+jar xvf fn.jar
 
 ####同一台服务器运行多个tomcat
 修改三个端口
