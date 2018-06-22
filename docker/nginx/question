@@ -1,0 +1,26 @@
+1.docker-compose.yml -volume
+nginx.conf挂载location错误，应该挂载到哪个地址
+
+2.nginx.conf 反向代理端口
+
+3ERROR: Network docker-network declared as external, but could not be found. <br>
+Please create the network manually using `docker network create docker-network` and try again.<br>
+
+docker network create -d bridge my-net<br>
+docker run -it --name nginx2 --network my-net nginx sh <br>
+错误nginx alresdy exist
+
+
+docker network create -d bridge docker-network -----docker-compose:networks:name<br>
+
+
+
+
+ERROR: for nginx2  Cannot create container for service nginx: 
+invalid volume spec "etc/nginx/nginx.conf": invalid volume specification: 'etc/nginx/nginx.conf': 
+invalid mount config for type "volume": invalid mount path: 'etc/nginx/nginx.conf' mount path must be absolute
+
+ERROR: for nginx  Cannot create container for service nginx: 
+invalid volume spec "etc/nginx/nginx.conf": invalid volume specification: 'etc/nginx/nginx.conf': 
+invalid mount config for type "volume": invalid mount path: 'etc/nginx/nginx.conf' mount path must be absolute
+ERROR: Encountered errors while bringing up the project.
