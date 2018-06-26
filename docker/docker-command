@@ -100,6 +100,10 @@ docker history nginx:v2
 dcoker run --name web2 -d -p 8099:80 nginx:v2
 
 
+实时查看docker容器日志
+
+$ sudo docker logs -f -t --tail 行数 容器名
+
 ###使用Dockerfile定制镜像
 FROM 指定基础镜像</br>
 docker build -t nginx:v3 .

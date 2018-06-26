@@ -24,3 +24,19 @@ ERROR: for nginx  Cannot create container for service nginx:
 invalid volume spec "etc/nginx/nginx.conf": invalid volume specification: 'etc/nginx/nginx.conf': 
 invalid mount config for type "volume": invalid mount path: 'etc/nginx/nginx.conf' mount path must be absolute
 ERROR: Encountered errors while bringing up the project.
+
+
+nginx.conf挂载完成<br>
+
+docker run -p 8095:80 --name nginx5 -v $PWD/conf/nginx.conf:/etc/nginx/nginx.conf -d nginx <br>
+
+docker restart nginx5
+
+docker exec -it nginx5 sh 
+
+docker logs nginx5 
+
+
+3.
+2018/06/26 01:32:59 [error] 6#6: *6 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.109.180, server: localhost, request: "GET / HTTP/1.1", upstream: "http://192.168.1.79:8182/", host: "192.168.1.79:8095"
+2018/06/26 01:32:59 [error] 6#6: *6 open() "/etc/nginx/html/50x.html" failed (2: No such file or directory), client: 192.168.109.180, server: localhost, request: "GET / HTTP/1.1", upstream: "http://192.168.1.79:8182/", host: "192.168.1.79:8095"
