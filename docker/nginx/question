@@ -40,3 +40,9 @@ docker logs nginx5
 3.
 2018/06/26 01:32:59 [error] 6#6: *6 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.109.180, server: localhost, request: "GET / HTTP/1.1", upstream: "http://192.168.1.79:8182/", host: "192.168.1.79:8095"
 2018/06/26 01:32:59 [error] 6#6: *6 open() "/etc/nginx/html/50x.html" failed (2: No such file or directory), client: 192.168.109.180, server: localhost, request: "GET / HTTP/1.1", upstream: "http://192.168.1.79:8182/", host: "192.168.1.79:8095"
+
+
+添加 index.thml通过docker-compose.yml挂载到nginx5
+
+
+4.可以把nginx.conf挂载到conf.d下面

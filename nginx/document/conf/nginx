@@ -1,0 +1,2 @@
+nginx启动：
+确保80端口没有被其他程序占用，netstat -ano | grep 80<br>
