@@ -1,0 +1,18 @@
+1.关键字
+break case chan const continue 
+default defer else fallthrough for 
+func go goto if import
+select struct switch type var
+interface map package range return 
+
+
+2.声明：
+变量var 常量const 类型type 实体对象func
+
+
+3.变量
+var 变量名字 类型 = 表达式
+var b.f,s = true,2.5,"four"
+
+
+
