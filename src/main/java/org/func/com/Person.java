@@ -1,5 +1,7 @@
-package src.main.java.org.docker.com;
-
+package src.main.java.org.func.com;
+/*
+ *function
+ */
 public class Person {
     private String name;
     private int id;

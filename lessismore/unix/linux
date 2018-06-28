@@ -1,2 +1,10 @@
 虚拟机切换鼠标
 ctrl+alt
+command+option
+
+
+
+
+du -h
+du -s
+du -d 0 1 2
