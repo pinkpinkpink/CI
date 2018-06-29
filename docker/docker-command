@@ -134,3 +134,7 @@ WORKDIR指定工作目录
 ###UI
 rancher</br>
 portainer</br>
+
+
+docker修改内存大小和cpu资源
+docker update -m 1024m container_name

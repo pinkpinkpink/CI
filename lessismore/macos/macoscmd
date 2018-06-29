@@ -1,12 +1,11 @@
 ###brew
 ###浏览器
-brew home 
+brew home
 
 ruby -version
 
 which brew
 
- 
 brew
 
 ###查看软件
@@ -14,10 +13,10 @@ brew upgrade []
 
 brew cask list
 brew cask info
-brew cask search 
+brew cask search
 brew cask install
 brew cask --force uninstall
 
 
-mac查看已经安装的jdk版本和位置
+mac查看已经安装的jdk版本和位置<br>
 /usr/libexec/java_home -V
