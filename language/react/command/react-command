@@ -1,0 +1,6 @@
+create-react-app xxx<br>
+cd xxx<br>
+npm install<br>
+npm start<br>
+线上编译命令
+npm run build<br>
