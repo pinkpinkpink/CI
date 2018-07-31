@@ -1,0 +1,275 @@
+1.1  mysql安装
+
+1.1.1         下载并安装
+
+创建存放mysql-5.7.13-linux-glibc2.5-x86_64.tar.gz包的目录：
+
+cd /usr/local
+
+mkdir mysqlTar
+
+mkdir mysql5.7.13
+
+下载mysql-5.7.13-linux-glibc2.5-x86_64.tar.gz到mysqlTar文件夹下，
+
+解压后，将解压生成的mysql-5.7.13-linux-glibc2.5-x86_64文件夹下所有文件移动到/usr/local/mysql5.7.13下。
+
+                                                  
+
+ 
+
+注意：一定要在root之外的目录，因为这涉及不同用户的操作，其他用户无权访问root目录。
+
+1.1.2         创建数据仓库目录
+
+cd /usr/local/mysql5.7.13
+
+mkdir data
+
+mkdir socketfolder
+
+1.1.3         添加用户及用户组
+
+直接用root用户也可以实现安装
+
+groupadd mysql
+
+将mysql用户添加到mysql用户组：
+
+useradd -g mysql mysql   
+
+1.1.4         改变目录所有者
+
+在/usr/local/mysql5.7.13下，执行命令
+
+chown –R mysql:mysql ./
+
+执行ll命令，发现所有者和所有组都是mysql，表示目录所有者发生改变。
+
+1.1.5         配置参数
+
+1.1.5.1     配置文件
+
+1.1.5.1.1           /etc/init.d/mysqld
+
+依然在/usr/local/mysql5.7.13下，执行命令
+
+cd support-files
+
+cp mysql.server /etc/init.d/mysqld
+
+修改vim /etc/init.d/mysqld，添加basedir和datadir路径：
+
+basedir=/usr/local/mysql5.7.13
+
+datadir=/usr/local/mysql5.7.13/data
+
+ 
+
+这样使得service mysqld start可以使用
+
+1.1.5.1.2           修改/etc/my.cnf
+
+vim /etc/my.cnf
+
+（如果没有这个文件
+
+usr/local/mysql5.7.13/support-file/my_default.cnf 拷贝到/etc/下，
+
+然后重命名my_default.cnf为my.cnf，命令行为：
+
+cp usr/local/mysql5.7.13/support-file/my_default.cnf /etc/
+
+rename my_default.cnf my.cnf my_default.cnf
+
+）
+
+最简配置文件内容：
+
+[mysqld]
+
+basedir=/usr/local/mysql5.7.13
+
+datadir=/usr/local/mysql5.7.13/data
+
+socket=/usr/local/mysql5.7.13/socketfolder/mysql.sock
+
+user=mysql
+
+# Disabling symbolic-links is recommended to prevent assorted security risks
+
+symbolic-links=0
+
+#设置大小写不敏感
+
+lower_case_table_names=1
+
+# 设置sql_mode
+
+sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
+
+[mysqld_safe]
+
+log-error=/var/log/mysqld.log
+
+pid-file=/var/run/mysqld/mysqld.pid
+
+[client]
+
+socket=/usr/local/mysql5.7.13/socketfolder/mysql.sock
+
+# 设置超时时间
+
+wait_timeout=90000
+
+interactive_timeout=90000
+
+ 
+
+注意：以上目录必须存在。
+
+1.1.5.2     初始化
+
+在/usr/local/mysql5.7.13/bin目录下：
+
+./mysqld --initialize --user=mysql --basedir=/usr/local/mysql5.7.13 --datadir=/usr/local/mysql5.7.13/data
+
+指定user、basedir和datadir的初始化。
+
+此处注意最后生成的临时密码，要记住，在第一次以root用户登录时要用。
+
+可能遇到的问题：
+
+a.       在initialize的过程中出现：mysql: can't find messagefile './errmsg.sys'
+
+该问题是由于mysql找不到相对应的启动文件，解决办法：
+
+1)         在/etc/my.cnf配置文件中指定以下内容：
+
+basedir= 
+
+datadir=
+
+./mysqld --initialize --user=mysql --basedir=/usr/local/mysql5.7.13 --datadir=/usr/local/mysql5.7.13/data
+
+2)         相应的$ datadir路径没有访问权限
+
+chown -R mysql:mysql $datadir   chmod -R 755 $datadir然后再次./mysqld --initialize
+
+b.       在启动mysql时，service mysqld start时出现错误：serviceThe server quit without updating PID file
+
+1)         可能是/etc/my.cnf配置文件没有指定$datadir目录
+
+在其内部设置$datadir目录
+
+2)         可能是$datadir路径你没有相应权限
+
+chown -R mysql:mysql $datadir   chmod -R 755 $datadir然后，service mysqld start；
+
+3)         可能是由于mysql进程已经存在
+
+ps -aux | grep mysqld   kill -9 然后重启service mysqld start
+
+4)         (4) 其他可能见参考链接：http://blog.rekfan.com/articles/186.html
+
+c.       ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' 
+
+当使用host参数为“localhost”连接Mysql服务时，会优先使用“sock文件”进行连接，而不是使用“IP:端口”进行连接，而Mysql尝试使用“sock文件”进行连接时，却无法获取“sock文件”的位置。
+
+首先确定service mysqld status状态。
+
+1)         查看mysql服务的socket文件位置：
+
+mysql socket文件的位置是在/etc/my.cnf中设置的，cat /etc/my.cnf内容如下：
+
+[mysqld]
+
+datadir=/var/lib/mysql
+
+socket=/var/lib/mysql/mysql.sock
+
+user=mysql
+
+ 
+
+[client]
+
+socket=/usr/local/mysql5.7.13/socketfolder/mysql.sock
+
+其中socket等于的路径就是socket文件的位置，我们只要修改my.cnf文件,告诉mysql，mysqldump，mysqladmin等mysql服务的socket位置在哪里就可以
+
+2)         可能是/etc/my.cnf中所设置的sock路径的访问权限问题
+
+进入sock路径，修改sock路径所有权
+
+chown -R mysql:mysql ./
+
+1.1.6         启动mysql
+
+service mysqld start
+
+停止、重启mysql：
+
+service mysqld stop
+
+service mysqld restart
+
+1.1.7         配置mysql服务开机自启动（可配可不配）
+
+chkconfig mysqld on
+
+如果想移除开机自启动，只需要chkconfig mysqld off
+
+1.1.8         连接
+
+（首先配置环境变量，使在任何地方都可以使用mysql指令
+
+vim /etc/profile
+
+增加：
+
+export PATH=$PATH:/usr/local/mysql5.7.13/bin  (不知为何不可用) ）
+
+连接mysql：
+
+mysql -uroot -pY5sf>j>jfsjife（这里用到之前生成的临时密码）
+
+1.1.9         修改密码（mysql5.7.13版本数据库密码最好设置复杂一点）
+
+进入后set password=password('Ds_123456');
+
+1.1.10      全部开放root的远程连接权限
+
+grant all privileges on . to 'root'@'%' identified by '123456';
+
+flush privileges;
+
+1.1.11      修改/etc/profile （即配置环境变量）
+
+使mysql命令可以随处运行。
+
+1.1.12      重启mysql
+
+退出mysql:
+
+quit
+
+停止mysql:
+
+service mysqld stop
+
+启动mysql:
+
+service mysqld start
+
+或直接重启mysql：
+
+service mysqld restart
+
+ 
+
+1.1.13      新建数据库
+
+使用第三方工具或者命令创建数据库作为资源库，创建好后导入资源库sql脚本，作为项目启动的必要前提。
+
+

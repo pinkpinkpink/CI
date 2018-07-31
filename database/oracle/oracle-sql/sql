@@ -1,0 +1,19 @@
+navicat连接oracle 报错信息：<br>
+
+ORA-12514: TNS:listener does not currently know of service requested in connect descriptor<br>
+
+Service Name 填写 OCP（由ORCL改为OCP） 就可以连接<br>
+
+
+
+连接访问oracle 
+
+su - oracle
+
+
+kettle连接oracle关于Servcie Name
+
+Host://192.168.2.153
+
+数据库名称：/ocp
+
