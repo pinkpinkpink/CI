@@ -1,0 +1,30 @@
+mysql5.7支持json！！！
+
+
+navicat无法远程连接mysql的原因：<br> 
+（1）没有开启远程访问权限 <br>
+GRANT ALL PRIVILEGES ON . TO 'root'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+root用户名 %所有人可以访问 password密码 (mysql密码)
+
+（2）防火墙没有关闭 
+service iptables status/stop/start 
+systemctl start/restart/stop firewalld
+
+
+Can't connect to local MySQL server through socket '/usr/local/mysql5.7/mysql5.7.22/socketfolder/mysql.sock' (111)<br>
+问题：mysql.sock在my.cnf[mysqld][client]socket=路径错误
+检查mysql运行状态
+ps -ef | grep mysql
+
+查询mysql.sock文件
+find / -iname mysql.sock
+
+编辑my.cnf
+vim /etc/my.cnf
+
+[mysqld]
+socket=socket=/usr/local/mysql5.7/mysql5.7.22/socketfolder/mysql.sock
+[client]
+socket=socket=/usr/local/mysql5.7/mysql5.7.22/socketfolder/mysql.sock
