@@ -4,8 +4,8 @@ services:
 
 postgres:
 
-    image:postgres
-    container_name:postgres
+    image: postgres
+    container_name: postgres
     ports:
     - '5432:5432'
     environment:
@@ -19,5 +19,5 @@ network:
 
     external:
 
-    name:docker-network
+    name: docker-network
 
