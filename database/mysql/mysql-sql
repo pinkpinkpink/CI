@@ -1,0 +1,168 @@
+- 连接数据库
+
+mysql -h host -u root -p
+
+- 断开连接
+
+>mysql quit&&\q 
+
+
+- 查询
+
+SELECT VERSION(),CURRENT_DATE;
+
+关键词不区分大小写
+
+select now();
+
+show databases;
+
+use
+
+- 建库、删库
+
+create database dbname CHARACTER utf8mb4;
+
+drop database dbname;
+
+- 建表、删表
+
+CREAT TABLE test_table(
+    column1 int,
+    column2 int
+    );
+
+DROP TABLE test_table;
+
+- 增、删、改、查
+
+INSERT test_table (column1,column2) value (1,2);
+
+INSERT test_tabel (column1,column2) value (3,4),(5,6);
+
+DELETE FROM test_table
+WHERE column1 = 1;
+
+UPDATE test_table
+SET column2 = 2
+WHERE column1 = 1;
+
+SELECT * FROM test_table;
+
+TRUNCATE TABEL test_table;
+
+- 数据类型
+
+    -数字-
+
+    TINYINT             1
+
+    SMALLINT            2
+
+    INT(INTEGER)        4
+
+    BIGINT              8
+    FLOAT               4
+    DOUBLE              8
+    DECIMAL             MAX(M+2,D+2)
+
+    *时间*
+
+    DATE
+    TIME
+    YEAR
+    DATETIME
+    TIMESTAMP
+
+    *字符*
+
+    CHAR
+    VARCHAR
+    TINYBLOB
+    TINYTEXT
+    BLOB
+    TEXT
+    MEDIUMBLOB
+    MEDIUMTEXT
+    LONGBLOB
+    LONGTEXT
+
+
+- 动作
+
+    >CREAT
+    DROP
+    INSERT INTO
+    DELETE
+    UPDATE
+    SELECT
+
+- 实体
+
+    >DATABASE
+    TABLE
+    VIEW
+
+- 修饰
+    >WHERE
+    IN
+    DISTINCT
+    LIMIT
+    ORDER BY
+    GROUP BY
+    HAVING
+
+- 连接与组合
+
+    >(INNER) JION ON
+    LEFT OUTER JION ON
+    UNION
+
+-  函数
+    >SUM()
+    AVG()
+    COUNT()
+    MAX()
+    MIN()
+
+- 事务
+
+    >START TRANSACTION
+    ROLLBACK
+    COMMIT
+
+- 约束
+    >PRIMARY KEY
+    UNIQUE
+    CONSTRAINT
+    INDEX
+
+- 修改密码
+
+su
+
+ALTER USER root WITH PASSWORD 
+
+***导入导出数据***
+
+mysql -u root -p 
+
+show databases;
+
+create test1;
+
+- 打开一个数据库
+
+use test1；
+
+- 导入数据
+
+source /usr/local/test1.sql 
+
+show tables；
+
+- 导出数据
+
+cd 「打开要将.sql文件生成的文件位置」
+
+mysqldump -u root -p test2>test2.sql
