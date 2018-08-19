@@ -4,24 +4,29 @@ ctrl+alt
 
 command+option
 
-
-
-
 du -h
 du -s
 du -d 0 1 2
 
 
 free -g （单位）
+
 free -m（单位） 内存
-内存大小cat /proc/meminfo | grep MemTotal
+
+内存大小
+
+cat /proc/meminfo | grep MemTotal
+
 硬盘大小：
+
 df -h （磁盘）
+
 iostat -x 1 （磁盘I/O）
 
 进程：
 
 jps
+
 jps -ml
 
 -q：仅输出VM标识符，不包括classname,jar name,arguments in main method； 
@@ -47,6 +52,7 @@ cat /proc/cpuinfo
 
 
 一、linux CPU大小
+
 [root@idc ~]# cat /proc/cpuinfo |grep "model name" && cat /proc/cpuinfo |grep "physical id"
 model name: Intel(R) Xeon(TM) CPU 2.80GHz
 model name: Intel(R) Xeon(TM) CPU 2.80GHz
@@ -60,15 +66,21 @@ physical id : 3
 说明：Linux下可以在/proc/cpuinfo中看到每个cpu的详细信息。但是对于双核的cpu，在cpuinfo中会看到两个cpu。常常会让人误以为是两个单核的cpu。
 其实应该通过Physical Processor ID来区分单核和双核。而Physical Processor ID可以从cpuinfo或者dmesg中找到. flags 如果有 ht 说明支持超线程技术 判断物理CPU的个数可以查看physical id 的值，相同则为同一个物理CPU
 可以看到上面，这台机器有两个双核的CPU，ID分别是0和3，大小是2.8G。
+
 二、内存大小
+
 [root@xbidc ~]# cat /proc/meminfo |grep MemTotal
 MemTotal: 1034612 kB
 [root@xbidc ~]#
+
 三、硬盘大小
+
 [root@xbidc ~]# fdisk -l |grep Disk
 Disk /dev/sda: 300.0 GB, 300000000000 bytes
 [root@xbidc ~]#
+
 四、 更多查看linux硬件信息的方法
+
 uname -a # 查看内核/操作系统/CPU信息的linux系统信息命令
 head -n 1 /etc/issue # 查看操作系统版本，是数字1不是字母L
 cat /proc/cpuinfo # 查看CPU信息的linux系统信息命令
