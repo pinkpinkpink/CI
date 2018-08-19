@@ -60,13 +60,12 @@ _粗体_
 
 - 第一项
 
-. 第二项
+· 第二项
 
 + 第三项
 
 2) 有序列表是将上述符号换成数字，并辅以.。
 
-1. 
 
 
 4.7 分割线
@@ -84,11 +83,34 @@ _____
 
 行内式
 
-【wangyifan的markdown库】
+[wangyifan的markdown库](https://github.com/pinkpinkpink/CI/blob/master/document/markdown/grammer/basis)
 
 参考式
 
+[wangyifan的markdown库1][1]
 
+
+4.9 图片
+
+！[🌹]
+
+在链接基础上前方加！。
+
+4.10 反斜杠\
+
+使符号变为普通符号。
+
+4.11 标记
+
+4.12 列表的使用
+
+用|表示纵向边界
+
+表头和表内容用-隔开
+
+用：对齐设置
+
+两边都有：表示居中，不加默认左对齐。
 
 ### Question1：
 

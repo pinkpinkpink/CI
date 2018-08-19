@@ -1,27 +1,40 @@
 http-sever
-2018.6.26 go frp nginx 
+
+- 2018.6.26 
+go 
+
+frp
+ 
+nginx
+ 
 http://192.168.3.4:7890/
 https://github.com/indexzero/http-server
 https://github.com/docker/dockercraft
 
-2018.6.27
+-2018.6.27
 
 函数计算 serverless 函数即服务（Faas） 
+
 Java8加入函数式编程 lamada 
 
 抽象泄漏
+
 软件即服务SaaS
+
 平台即服务PaaS
+
 基础设施即服务IaaS
 
-2018.6.28
+- 2018.6.28
 
 netty代替mina
+
 怎么发布函数计算到aliyun
+
 Springboot-config
 
 
-2018.6.29
+- 2018.6.29
 
 leetcode 6、9
 java.util.currenthashmap
@@ -29,7 +42,7 @@ java.util.list
 springboot-web
 
 
-8.4
+- 8.4
 
 服务端渲染
 
@@ -47,7 +60,7 @@ graphl
 
 把后端交给webpack ？？？
 
-8.17 
+- 8.17 
 
 GB\T 28181
 
