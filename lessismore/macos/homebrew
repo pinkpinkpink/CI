@@ -1,0 +1,36 @@
+#!/bin/sh
+
+ruby -version
+
+which brew
+
+
+### 查看软件
+
+brew upgrade []
+- brew
+
+brew install node
+
+brew install tree
+
+- brew cask 
+
+brew cask list
+
+brew cask info
+
+brew cask search
+
+brew cask install
+
+brew cask install firefox
+
+brew cask install java
+
+
+
+brew cask --force uninstall
+
+brew clean && brew cask clean
+
