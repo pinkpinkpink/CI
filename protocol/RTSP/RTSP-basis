@@ -1,0 +1,29 @@
+rtsp url：
+
+rtsp;//host[:port]
+
+
+- OPTIONS
+
+- DESCRIBE
+
+- SETUP
+
+- PLAY
+
+- PAUSE
+
+- TEARDOWN
+
+- GET_PARAMETER
+
+- SET_PARAMETER
+
+设置指定媒体流参数
+
+- REDIRECT
+
+- ANNOUNCE
+
+- RECORD
+

@@ -1,7 +1,7 @@
-1.docker-compose.yml -volume
+1. docker-compose.yml -volume
 nginx.conf挂载location错误，应该挂载到哪个地址
 
-2.nginx.conf 反向代理端口
+2. nginx.conf 反向代理端口
 
 3ERROR: Network docker-network declared as external, but could not be found. <br>
 Please create the network manually using `docker network create docker-network` and try again.<br>
@@ -37,7 +37,7 @@ docker exec -it nginx5 sh
 docker logs nginx5 
 
 
-3.
+3. 
 2018/06/26 01:32:59 [error] 6#6: *6 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.109.180, server: localhost, request: "GET / HTTP/1.1", upstream: "http://192.168.1.79:8182/", host: "192.168.1.79:8095"
 2018/06/26 01:32:59 [error] 6#6: *6 open() "/etc/nginx/html/50x.html" failed (2: No such file or directory), client: 192.168.109.180, server: localhost, request: "GET / HTTP/1.1", upstream: "http://192.168.1.79:8182/", host: "192.168.1.79:8095"
 
@@ -45,4 +45,4 @@ docker logs nginx5
 添加 index.thml通过docker-compose.yml挂载到nginx5
 
 
-4.可以把nginx.conf挂载到conf.d下面
+4. 可以把nginx.conf挂载到conf.d下面
