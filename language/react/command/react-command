@@ -1,6 +1,21 @@
-create-react-app xxx<br>
-cd xxx<br>
-npm install<br>
-npm start<br>
+brew install npm (recommend node.js offical rather than homebrew )
+
+- install create-react-app
+
+- npm install -g create-react-app
+
+- create-react-app my-app
+
+- cd my-app
+
+- npm start
+
+localhost:3000
+
 线上编译命令
-npm run build<br>
+
+npm run build
+
+
+
+

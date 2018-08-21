@@ -2,4 +2,8 @@
 
 mac查看已经安装的jdk版本和位置
 
-/usr/libexec/java_home -V
+/usr/libexec/ava_home -V
+
+- search port
+
+sudo lsof -i:3000

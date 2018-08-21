@@ -23,3 +23,16 @@ git reset --hard HEAD～3     强制回滚3个版本
 git push -f
 
 git ss 查看上传内容 
+
+
+- git upload repository
+
+git init
+
+git add .
+
+git commit -m ""
+
+git remote add remote repository url  
+
+git push -u origin master
