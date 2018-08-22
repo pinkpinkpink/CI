@@ -149,3 +149,6 @@ docker update -m 1024m container_name
 ### docker-compose 
 
 使用docker-compose安装的nginx，用docker-compse启动，启动命令是docker-compose up -d nginx
+
+
+docker network creat docker-network

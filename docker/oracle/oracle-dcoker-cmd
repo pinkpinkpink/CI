@@ -77,5 +77,3 @@ SP2-0734: unknown command beginning "lsnrctl st..." - rest of line ignored.
 - shutdown immediate 关闭数据库实例
 
 - exit
-
-s
