@@ -1,17 +1,10 @@
 version: '2'
-
 services:
-
   oracle:
-
-    image: oraclelinux
-
+    image: sath89/oracle-12c
     container_name: oracle
-
     ports:
-
-    - '1522:1521'
-
+    - '1521:1521'
+    - '8080:8080'
     volumes:
-
-    - ./data:/u01/app/data
+    - ./data:/u01/app/oracle
