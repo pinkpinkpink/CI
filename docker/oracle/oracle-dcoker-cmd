@@ -78,3 +78,4 @@ SP2-0734: unknown command beginning "lsnrctl st..." - rest of line ignored.
 
 - exit
 
+s
