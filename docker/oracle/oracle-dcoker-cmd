@@ -1,0 +1,80 @@
+开机自启
+
+systemctl enable/status docker
+
+
+启动
+
+service docker start
+
+
+pip install docker-compose
+
+
+修改密码
+
+passwd oracle
+
+
+vim /etc/shadow
+
+- conn oracle db
+
+sqlplus / as sysdba (user ：system)
+
+
+- update username
+
+alter user system identified by 密码；
+
+- choose user
+
+su - oracle
+
+默认用户是system/system？
+
+vim .bash_profile
+
+ORACLE_SID=orclhq
+
+
+监听
+
+lsnrctl start
+
+
+**recode**:
+
+alter user system identified by system;
+
+
+SQL> lsnrctl status
+
+SP2-0734: unknown command beginning "lsnrctl st..." - rest of line ignored.
+
+
+
+# linux start oracle 
+
+**启动数据库实例**
+
+1) 启动监听
+
+2) 启动数据库实例
+
+## 进入sqlplus启动实例 
+
+- su - oracle 
+
+- lsnrctl start  打开监听
+
+- sqlplus /nolog 进入sqlplus
+
+- conn / as sysdba 连接sysdba
+
+- startup 启动数据库实例
+
+- shutdown immediate 关闭数据库实例
+
+- exit
+

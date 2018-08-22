@@ -23,6 +23,13 @@ df -h （磁盘）
 
 iostat -x 1 （磁盘I/O）
 
+
+查看linux
+
+more /etc/issue
+
+cat /proc/version
+
 进程：
 
 jps

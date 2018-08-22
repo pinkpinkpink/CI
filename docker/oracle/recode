@@ -1,0 +1,38 @@
+https://zhidao.baidu.com/question/40351398.html?qbl=relate_question_3&word=oraclelinux%20%C4%AC%C8%CF%B5%C4%D3%C3%BB%A7%C3%DC%C2%EB
+
+
+
+
+Oracle默认的用户名和密码是什么?
+
+在控制台用sqlplus / as sysdba登陆oracle系统时，所用的用户名和密码是什么？
+
+你是说默认的用户名和密码么
+
+scott 密码是 tiger
+
+sys 密码是 change_on_install
+
+system 密码是 manager
+
+sysman 密码是 oem_temp
+
+其中直接管理模式可以为sysdba的为后面三个，要是集群的话再去掉system
+
+
+
+sqlplus / as sysdba 这是以SYSDBA这个角色登陆SQLPLUS，SYSDBA只是个角色，它本身并没有密码
+
+用sysdba进入的时候,就可以改密码了
+
+alter user username account unlock identified by password
+
+username是用户名
+
+password是你想要的密码 
+
+
+
+Navicat是通过Oracle客户端连接Oracle服务器的，
+
+Oracle的客户端分为两种，一种是标准版，一种是简洁版，即Oracle Install Client

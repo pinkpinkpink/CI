@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+
+  oracle:
+
+    image: oraclelinux
+
+    container_name: oracle
+
+    ports:
+
+    - '1522:1521'
+
+    volumes:
+
+    - ./data:/u01/app/data
