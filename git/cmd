@@ -27,6 +27,10 @@ git ss 查看上传内容
 
 - git upload repository
 
+git config --global user.name ""
+
+git config --global email.name "15638515778@163.com"
+
 git init
 
 git add .
@@ -36,3 +40,36 @@ git commit -m ""
 git remote add origin repository_url  
 
 git push -u origin master 
+
+- delete the .git file hidden in the project
+
+git rm --cached -r .idea .gradle XXX
+
+git commit -m "delete XXX"
+
+git push origin master
+
+
+- git add
+
+git add .误添加了所有文件
+
+git reset HEAD 撤回所有添加
+
+不建议使用git add .
+
+git add -u：将文件的修改、**删除**，添加到暂存区。
+
+git add .：将文件的修改，**新建**，添加到暂存区。
+
+git add -A：将文件的修改，**删除\新建**，添加到暂存区
+
+git add -u [<path>]: 
+
+把<path>中所有tracked文件中被修改过或已删除文件的信息添加到索引库。
+它不会处理untracted的文件。
+
+git add -A: [<path>]
+
+表示把<path>中所有tracked文件中被修改过或已删除文件
+和**所有untracted文件**信息添加到索引库。
