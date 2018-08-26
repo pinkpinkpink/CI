@@ -4,14 +4,17 @@
  * This is a general purpose Gradle build.
  * Learn how to create Gradle builds at https://guides.gradle.org/creating-new-gradle-builds/
  */
-group = 'org.wangyifan.docker'
-apply plugin: 'java'
-sourceCompatility = 8
+apply plugin = 'java'
+
+version = '1.0.1-SANPSHOT'
+
+sourceCompatibility = 1.10
+
 respositories{
 
     mavenCentry()
 
 }
-denpendencies{
+dependencies{
 
 }

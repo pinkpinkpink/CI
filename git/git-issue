@@ -1,1 +1,11 @@
 1. git merge 和  git rebase的区别
+
+
+2. fatal: remote origin already exists.
+    
+    git remote rm origin
+    
+    vim .git/config
+    
+    
+    

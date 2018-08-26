@@ -33,6 +33,6 @@ git add .
 
 git commit -m ""
 
-git remote add remote repository url  
+git remote add origin repository_url  
 
-git push -u origin master
+git push -u origin master 

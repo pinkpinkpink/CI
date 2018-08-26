@@ -1,0 +1,9 @@
+group = 'org.wangyifan.ci'
+apply plugin = 'java'
+version = '1.0.1-SANPSHOT'
+respositories{
+    mavenCentry()
+}
+dependencies{
+
+}
