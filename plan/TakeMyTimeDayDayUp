@@ -75,3 +75,12 @@ GB\T 28181
     内网穿透frp这个赵工在2018.6.26说过！
     
     
+- 08.27
+    
+    - p(process)m(manager)2
+    
+    pm2 start app.js
+    
+    - redis集群
+        
+    客户端
