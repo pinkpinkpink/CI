@@ -1,0 +1,48 @@
+- Select WIFI PASSWORD
+
+    http://192.168.0.1 into route
+
+- 通过域名访问网站的原理是什么
+
+    DNS（Domain Name System）:将域名和IP地址互相映射一个分布式数据库。
+
+    域名转换成IP地址，通过IP地址访问网站
+
+CNAME
+
+A记录（主机记录）
+
+DNS两种查询方式：递归和迭代。
+
+DNS客户端：递归服务器
+
+DNS服务器：迭代查询
+
+- 域名解析
+
+    DNS缓存
+
+
+跟域名服务器(root name server)
+
+    是互联网域名解析系统的最高级别的域名服务器。
+
+    跟域名服务器的数量限制为13个。
+
+    WHOIS数据库
+
+
+
+DNS污染
+
+    域名服务器缓存污染
+
+    DNS Cache Pollution
+
+
+
+
+slookup
+
+
+GitHubPages

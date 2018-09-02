@@ -1,0 +1,22 @@
+binlog（binary log） 
+
+二进制日志
+
+数据恢复、主从复制
+
+show variables like '%log_bin%';
+
+vim my.cnf
+
+    server-id = 1;
+    log-bin = /var/bin/mysql/mysql-bin;
+
+- 获取当前二进制列表
+
+    SHOWBINARYLOGS;
+    
+    ls -l /var/bin/mysql
+    
+    mysqlbinlog -d mysqld-bin.000001
+
+    cat mysql-bin.index

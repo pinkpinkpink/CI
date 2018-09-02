@@ -57,6 +57,41 @@ netstat -n | grep tcp | grep 侦听端口 | wc -l
 cat /proc/cpuinfo
 
 
+- 操作文件
+
+    - ln  创建硬连接、软连接
+
+    - mv 移动、重命名
+
+    - cp 
+
+        cp dir1/* dir2   
+        
+        
+type
+
+
+which is
+
+man 
+
+what is
+
+alias   cd /usr;ls;cd -
+
+alias foo='cd /usr;ls;cd -'
+
+- 重定向
+
+| 管道线
+
+grep 打印匹配行
+
+head/tail -n 5/10 打印文件开头部分
+
+- shell
+
+
 
 一、linux CPU大小
 
