@@ -73,3 +73,11 @@ git add -A: [<path>]
 
 表示把<path>中所有tracked文件中被修改过或已删除文件
 和**所有untracted文件**信息添加到索引库。
+
+- git branch newbranch
+
+**将新分支合并到主线**
+
+- git checkout master
+
+- git merge newbranch

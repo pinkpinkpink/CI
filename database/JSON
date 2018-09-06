@@ -1,0 +1,19 @@
+JSON有6种数据类型
+
+基本类型：
+
+1. Number 整数/浮点数
+
+2. boolean  true/false
+
+3. String 字符串
+
+4. null 空对象
+
+
+对象类型：
+
+5. Object 无序 （key:value）
+
+6. Arrays   数组元素之间用逗号(,)隔开
+
