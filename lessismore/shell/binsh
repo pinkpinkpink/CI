@@ -26,3 +26,6 @@ then
    source和.是等效的
 source ./function.sh
 . ./function.sh
+
+
+echo TGlrZWtpZHM= | base64 -D

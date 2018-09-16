@@ -4,33 +4,48 @@ psql
 
 show databases;
 
-###连接数据库
+- 连接数据库
+
 psql -U user -d dbname
-###查看数据库
+
+- 查看数据库
 \l
 select * from pg_database;
 pg_tablespace;
 pg_user;
 pg_roles;
-###修改数据库
+
+- 修改数据库
+
 ALTER DATABASE
-###修改数据库角色
+
+- 修改数据库角色
+
 ALTER ROLE
-###新建数据库
+
+- 新建数据库
+
 CREATE DATABASE
-###删除数据库
+
+- 删除数据库
+
 dropdb -u postgres dbname;
 dropdb dbname;
 
 psql#DROP DATABASE dbname; 大写！超管
 
-###切换表
+- 切换表
+
 \c dbname
-###查看表
+
+- 查看表
+
 \dt 所有表
 \d tbname
+
 question1 :
 查看某个指定数据库中的表
+
 \di 列出索引
 \dv 列出视图
 DROP TABLE
@@ -39,7 +54,7 @@ INSERT 表中创建新行
 SELECT 表中检索行
 
 
-###删除表
+- 删除表
 truncate table tbname;
 delete from tbname where [condition];
 delete from tbname;
@@ -47,18 +62,20 @@ delete from tbname where id = 1;
 delete from tbname where colume between xxx and xxx;
 
 
-###导入导出
+- 导入导出
 
-####导入
+  - 导入
+
 createdb newdatabase
 
 psql -d newdatabase -U postgres -f /.sql postgres
 
-####导出
+  - 导出 
+
 pg_sql -U postgres -t table_name database_name > ./.sql
 
+- 修改密码
 
-###修改密码
 sudo -u postgres psql
 
 ALTER USER postgres WITH PASSWORD 'postgres';
