@@ -1,11 +1,11 @@
-###tomcat
+tomcat
 docker pull tomcat</br>
 
 docker run -i -t --name AuthDocker -p 8081:8080 tomcat /bin/bash</br>
 
 ./catalina.sh run</br>
 
-####docker容器与本地文件的传输</br>
+docker容器与本地文件的传输</br>
 
 docker ps -a </br>
 
@@ -18,10 +18,10 @@ docker start AuthDocker</br>
 docker attach AuthDocker</br> --已废弃
 
 
-###进入docker容器
+进入docker容器
 docker exec -it container_name sh
 
 
-###docker-compose.yml
+docker-compose.yml
 volumes:
 - 

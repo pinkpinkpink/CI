@@ -1,17 +1,17 @@
 --- 视频 ---
-### windows
+ windows
 
 mpchc<br>
 
-### macos
+ macos
 
 iina
 
-### linux
+- linux
 
 mpv
 
-### android
+- android
 
 mxplayer
 
@@ -19,5 +19,4 @@ mxplayer
 - pm2
 
     process manager 2
-    
     
