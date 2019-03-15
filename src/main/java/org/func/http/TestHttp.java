@@ -20,10 +20,7 @@ public class TestHttp {
         double payment = in.nextDouble();
         System input;
 
-        TestHttp testHttp;
-        testHttp = (name, num) -> {
-            return System.out.println();
-        };
+
 
     }
 
