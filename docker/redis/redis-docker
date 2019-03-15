@@ -2,4 +2,26 @@ redis
 
 port:6379
 
-docker run --name some-redis -d redis</br> 
+docker run --name some-redis -d redis</br>
+
+1. docker search redis
+
+2. docker pull redis
+
+3. docker images redis
+
+4. mkdir -p ~/redis ~/redis/data
+
+5. cd redis touch Dockerfile
+
+6. docker build -t redis . // .表示当前目录
+
+7. docker run -p 6379:6379 -v $PWD/data:/data  -d redis:3.2 redis-server --appendonly yes //运行容器
+
+-v $PWD/data:/data 将主机中当前目录下的data卦载到容器的data
+
+redis-server --appendonly yes ，容器执行redis-server命令，打开redis持久化设置
+
+8. docker exec -it  CONTAINER ID redis-cli  //链接容器
+
+9. docker info //查看
