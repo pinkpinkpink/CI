@@ -1,5 +1,5 @@
 package src.main.java.org.func.com;
-/*
+/**
  *function
  */
 public class Person {
