@@ -10,5 +10,10 @@ public enum Person {
         this.name =name;
 
     }
+    public static Person add(PersonVo vo){
+        Person person = new Person();
+        person.name
+
+    }
 
 }
