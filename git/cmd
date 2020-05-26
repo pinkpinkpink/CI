@@ -22,7 +22,7 @@ git reset --hard HEAD～3     强制回滚3个版本
 
 git push -f
 
-git ss 查看上传内容 
+git s 查看上传内容
 
 
 - git upload repository
