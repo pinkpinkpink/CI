@@ -1,3 +1,5 @@
 行数
 
-vim : set nu
+vim : set number
+
+

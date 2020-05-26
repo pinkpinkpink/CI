@@ -23,15 +23,5 @@ module.exports.handler = function(req, resp, context) {
         resp.send(JSON.stringify(params, null, '    '));
     });
 
-    /*
-    getFormBody(req, function(err, formBody) {
-        for (var key in req.queries) {
-          var value = req.queries[key];
-          resp.setHeader(key, value);
-        }
-        params.body = formBody;
-        console.log(formBody);
-        resp.send(JSON.stringify(params));
-    });
-    */
+
 }

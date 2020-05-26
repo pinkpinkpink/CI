@@ -13,3 +13,13 @@
     新建分支合并问题以及与master的关系
     
     
+    
+4. wangyifandeMacBook-Air:target wangyifan$ git push origin master
+   fatal: '.gradle' does not appear to be a git repository
+   fatal: Could not read from remote repository.
+   
+   Please make sure you have the correct access rights
+   and the repository exists.
+
+
+

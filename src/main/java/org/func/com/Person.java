@@ -1,6 +1,7 @@
 package src.main.java.org.func.com;
-/*
+/**
  *function
+ * @author wangyifan
  */
 public class Person {
     private String name;

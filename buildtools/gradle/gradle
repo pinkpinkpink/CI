@@ -1,0 +1,32 @@
+# gradle
+use default gradlew wrapper
+
+gradle wrapper
+
+ ## 初始化init
+
+add all jar
+
+use gradle 'wrapper' task configure
+## 配置
+
+## 执行
+./gradlew build
+
+configure Idea
+
+
+- build.gradle
+
+> plugins {
+      id 'java'
+  }
+  repositories {
+      jcenter()
+      //mavenCentral()
+  }
+  dependencies {
+      compile 'com.google.guava:guava:23.0'
+      testCompile 'junit:junit:4.12'
+  }
+
