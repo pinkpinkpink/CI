@@ -19,8 +19,8 @@ public class TestHttp {
 
     }
 
-    public void connect(String message,int num){
-        this.message =message;
+    public void connect(String message, int num) {
+        this.message = message;
         this.num = num;
         //TODO lamda
 

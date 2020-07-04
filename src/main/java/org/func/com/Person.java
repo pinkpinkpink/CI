@@ -1,16 +1,20 @@
 package src.main.java.org.func.com;
+
 /**
- *function
+ * function
+ *
  * @author wangyifan
  */
 public class Person {
     private String name;
     private int id;
     private int age;
-    public Person(){
+
+    public Person() {
         cry();
     }
-    public void Person(String name,int id,int age){
+
+    public void Person(String name, int id, int age) {
         this.name = name;
         this.id = id;
         this.age = age;
@@ -41,7 +45,7 @@ public class Person {
         this.name = name;
     }
 
-    public void cry(){
+    public void cry() {
         System.out.println("wawawa");
 
     }

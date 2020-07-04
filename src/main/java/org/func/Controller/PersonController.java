@@ -16,10 +16,12 @@ public class PersonController {
     public void AddPerson() {
         person.hashCode();
     }
-    public void deletePerson(){
+
+    public void deletePerson() {
 
     }
-    public static void login(){
+
+    public static void login() {
 
     }
 

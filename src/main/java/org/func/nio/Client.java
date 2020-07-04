@@ -10,7 +10,7 @@ import java.net.UnknownHostException;
  * @create 2019-04-07 16:31
  */
 public class Client {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         try {
             System.out.println("Client连接准备=" + System.currentTimeMillis());
             Socket socket = new Socket("localhost", 8088);
@@ -20,10 +20,9 @@ public class Client {
             socket.close();
 
 
-
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
 

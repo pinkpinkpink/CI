@@ -8,7 +8,7 @@ public class EnumTest {
         Scanner in = new Scanner("");
         System.out.println("enter a size:(SMALL, MEDIUM, LARGE, EXTRA_LARGE)");
         String input = in.next().toUpperCase();
-        Size size = Enum.valueOf(Size.class,input);
+        Size size = Enum.valueOf(Size.class, input);
     }
 
     public enum Size {
@@ -24,7 +24,6 @@ public class EnumTest {
         }
 
         //TODO toString() 返回枚举常量名
-
 
 
     }

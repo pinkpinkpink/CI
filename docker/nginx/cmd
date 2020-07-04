@@ -1,1 +1,6 @@
-docker run -p 8088:80 --name nginx -v $PWD/www:/www -v $PWD/conf/nginx.conf:/etc/nginx/nginx.conf -v $PWD/logs:/logs -d nginx
+docker run -p 8088:80 --name nginx 
+
+-v $PWD/www:/www -v $PWD/conf/nginx.conf:/etc/nginx/nginx.conf 
+
+
+-v $PWD/logs:/logs -d nginx
